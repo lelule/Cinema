@@ -17,9 +17,9 @@ public class Heure {
     /**
      * 
      */
-    private int heure;
+    private String heure;
 
-    public Heure(int idHeure, int heure) {
+    public Heure(int idHeure, String heure) {
         this.idHeure = idHeure;
         this.heure = heure;
     }
@@ -28,7 +28,7 @@ public class Heure {
         return idHeure;
     }
 
-    public int getHeure() {
+    public String getHeure() {
         return heure;
     }
     
