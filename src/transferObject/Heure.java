@@ -10,5 +10,6 @@ package transferObject;
  * @author Ludo
  */
 public class Heure {
-    
+    private int idHeure;
+    private int heure;
 }
