@@ -5,10 +5,26 @@
  */
 package transferObject;
 
+import java.util.Date;
+
 /**
  *
  * @author Ludo
  */
 public class Jour {
-    
+    private int idJour;
+    private Date date_jour;
+
+    public Jour(int idJour, Date date_jour) {
+        this.idJour = idJour;
+        this.date_jour = date_jour;
+    }
+
+    public int getIdJour() {
+        return idJour;
+    }
+
+    public Date getDate_jour() {
+        return date_jour;
+    }
 }
