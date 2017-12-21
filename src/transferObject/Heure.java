@@ -23,6 +23,14 @@ public class Heure {
         this.idHeure = idHeure;
         this.heure = heure;
     }
+
+    public int getIdHeure() {
+        return idHeure;
+    }
+
+    public int getHeure() {
+        return heure;
+    }
     
     
 }
