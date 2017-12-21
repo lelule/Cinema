@@ -10,5 +10,30 @@ package transferObject;
  * @author Ludo
  */
 public class Salle {
-    
+    private int idSalle;
+    private String nom;
+    private int capacité;
+
+    public Salle(int idSalle, String nom, int capacité) {
+        this.idSalle = idSalle;
+        this.nom = nom;
+        this.capacité = capacité;
+    }
+
+    public int getIdSalle() {
+        return idSalle;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public int getCapacité() {
+        return capacité;
+    }
+
+    @Override
+    public String toString() {
+        return nom ;
+    }
 }
