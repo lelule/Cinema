@@ -10,5 +10,8 @@ package transferObject;
  * @author Ludo
  */
 public class Film {
-    
+    private int idFilm;
+    private String titre;
+    private int année;
+    private int durée;
 }
