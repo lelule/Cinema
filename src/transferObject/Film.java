@@ -21,6 +21,22 @@ public class Film {
         this.année = année;
         this.durée = durée;
     }
+
+    public int getIdFilm() {
+        return idFilm;
+    }
+
+    public String getTitre() {
+        return titre;
+    }
+
+    public int getAnnée() {
+        return année;
+    }
+
+    public int getDurée() {
+        return durée;
+    }
     
     
 }
