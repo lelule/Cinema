@@ -14,4 +14,13 @@ public class Film {
     private String titre;
     private int année;
     private int durée;
+
+    public Film(int idFilm, String titre, int année, int durée) {
+        this.idFilm = idFilm;
+        this.titre = titre;
+        this.année = année;
+        this.durée = durée;
+    }
+    
+    
 }
