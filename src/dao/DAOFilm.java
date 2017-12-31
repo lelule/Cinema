@@ -14,4 +14,8 @@ import transferObject.Film;
  */
 public interface DAOFilm {
     ArrayList<Film> selectFilms();
+    boolean insertFilm(Film f);
+    boolean updateFilm(Film f);
+    boolean deleteAppareil(int id);
+    
 }
