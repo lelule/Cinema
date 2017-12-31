@@ -11,7 +11,7 @@ package transferObject;
  */
 public class Film {
     /**
-     * L'ID d'un film. Cette id n'est pas modifiable
+     * L'ID d'un film. Cet id n'est pas modifiable
      */
     private int idFilm;
     /**
@@ -45,6 +45,9 @@ public class Film {
         this.année = année;
         this.durée = durée;
     }
+
+    public Film() {
+    }
     
     /**
      * retourne l'id.
@@ -74,6 +77,28 @@ public class Film {
     public int getDurée() {
         return durée;
     }
+
+    public void setIdFilm(int idFilm) {
+        this.idFilm = idFilm;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public void setAnnée(int année) {
+        this.année = année;
+    }
+
+    public void setDurée(int durée) {
+        this.durée = durée;
+    }
+    
+    
+    
+    
+    
+    
     /**
      * Redéfinition de la méthode toString afin d'afficher le titre d'un film
      * @return le titre d'un film
