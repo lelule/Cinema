@@ -26,7 +26,7 @@ public class DAOJourMySQL implements DAOJour{
     @Override
     public ArrayList<Jour> selectJours(){
         ArrayList<Jour> listeJours= new ArrayList();
-        String req= "Select * from salle";
+        String req= "Select * from jour";
         try {
             ResultSet resu=ConnexionMySQL.getInstance().selectQuery(req);     
             while (resu.next()){ 

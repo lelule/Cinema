@@ -27,7 +27,7 @@ public class ConnexionMySQL implements Connexion
             }
         connected=false;
 
-        String url = "jdbc:mysql://localhost/grosappareils"; //en local
+        String url = "jdbc:mysql://localhost/cinema"; //en local
         //String url = "jdbc:mysql://database.edu.uccle/p_sove0104_GrosApp"; //avec serveur database
         try{
             /* setup the properties: si les accents ne sont pas Unicode ds la BDD
