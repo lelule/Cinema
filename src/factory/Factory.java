@@ -14,6 +14,18 @@ import daoMySQL.*;
  * @author Ludo
  */
 public class Factory {
+    public static DAOFilm getDAOFilm(){
+        return DAOFilmMySQL.getInstance();
+        
+    }
+    public static DAOSalle getDAOSalle(){
+        return DAOSalleMySQL.getInstance();
+        
+    }
+    public static DAOJour getDAOJour(){
+        return DAOJourMySQL.getInstance();
+        
+    }
     public static Connexion getDAOConnexion()
     {
         return ConnexionMySQL.getInstance();
