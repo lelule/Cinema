@@ -5,6 +5,7 @@
  */
 package transferObject;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -27,4 +28,12 @@ public class Jour {
     public Date getDate_jour() {
         return date_jour;
     }
+
+    @Override
+    public String toString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String d=sdf.format(date_jour);
+        return d;
+    }
+    
 }

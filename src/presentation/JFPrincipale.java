@@ -45,7 +45,6 @@ public class JFPrincipale extends javax.swing.JFrame {
         jMenuItemHeure = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 500));
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -79,6 +78,11 @@ public class JFPrincipale extends javax.swing.JFrame {
         });
 
         jMenuItemSeance.setText("Seances");
+        jMenuItemSeance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSeanceActionPerformed(evt);
+            }
+        });
         jMenuEdit.add(jMenuItemSeance);
 
         jMenuItemFilm.setText("Film");
@@ -141,7 +145,6 @@ public class JFPrincipale extends javax.swing.JFrame {
         } catch (PropertyVetoException ex) {
             Logger.getLogger(JFPrincipale.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
         jDesktopPane1.repaint();
     }//GEN-LAST:event_jMenuItemFilmActionPerformed
 
@@ -161,6 +164,19 @@ public class JFPrincipale extends javax.swing.JFrame {
         }
          jDesktopPane1.repaint();
     }//GEN-LAST:event_jMenuItemJourActionPerformed
+
+    private void jMenuItemSeanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSeanceActionPerformed
+        // TODO add your handling code here:
+        jDesktopPane1.removeAll();
+        JIFSeances s = new JIFSeances();
+        jDesktopPane1.add(s);
+        try {
+            s.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(JFPrincipale.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         jDesktopPane1.repaint();
+    }//GEN-LAST:event_jMenuItemSeanceActionPerformed
 
     /**
      * @param args the command line arguments

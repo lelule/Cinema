@@ -18,6 +18,9 @@ public class Factory {
         return DAOFilmMySQL.getInstance();
         
     }
+    public static DAOSeance getDAOSeance(){
+        return DAOSeanceMySQL.getInstance();
+    }
     public static DAOSalle getDAOSalle(){
         return DAOSalleMySQL.getInstance();
         
@@ -26,6 +29,12 @@ public class Factory {
         return DAOJourMySQL.getInstance();
         
     }
+    public static DAOHeure getDAOHeure(){
+        return DAOHeureMySQL.getInstance();
+        
+    }
+    
+    
     public static Connexion getDAOConnexion()
     {
         return ConnexionMySQL.getInstance();

@@ -7,6 +7,7 @@ package dao;
 
 import java.util.ArrayList;
 import transferObject.Film;
+import transferObject.Seance;
 
 /**
  *
@@ -14,6 +15,7 @@ import transferObject.Film;
  */
 public interface DAOFilm {
     ArrayList<Film> selectFilms();
+    ArrayList<Film> selectFilms(int id);
     boolean insertFilm(Film f);
     boolean updateFilm(Film f);
     boolean deleteAppareil(int id);

@@ -13,7 +13,7 @@ import transferObject.Seance;
  * @author Ludo
  */
 public class TableModelSeances extends javax.swing.table.AbstractTableModel {
-    private String[] columnNames = {"Titre","Année Sortie","Durée","Nom salle","Jour","Heure"};
+    private String[] columnNames = {"id","Titre","Année Sortie","Durée","Nom salle","Jour","Heure"};
     private ArrayList <Seance> myList;
 
     public TableModelSeances(ArrayList myList)
@@ -40,12 +40,13 @@ public class TableModelSeances extends javax.swing.table.AbstractTableModel {
         Seance mySeance = myList.get(row);
         switch (col)
         {
-            case 0 :    return mySeance.getFilm().getTitre();
-            case 1 :    return mySeance.getFilm().getAnnée();
-            case 2 :    return mySeance.getFilm().getDurée();
-            case 3 :    return mySeance.getSalle().getNom();
-            case 4 :    return mySeance.getJour();
-            case 5 :    return mySeance.getHeure(); 
+            case 0 :    return mySeance.getId();
+            case 1 :    return mySeance.getFilm().getTitre();
+            case 2 :    return mySeance.getFilm().getAnnée();
+            case 3 :    return mySeance.getFilm().getDurée();
+            case 4 :    return mySeance.getSalle().getNom();
+            case 5 :    return mySeance.getJour();
+            case 6 :    return mySeance.getHeure(); 
         }
         return null;
     }

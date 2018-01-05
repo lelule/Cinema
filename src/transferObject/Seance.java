@@ -5,17 +5,24 @@
  */
 package transferObject;
 
+import java.util.Objects;
+
 /**
  *
  * @author Ludo
  */
 public class Seance {
+    private int id;
     private Film film;
     private Salle salle;
     private Jour jour;
     private Heure heure;
 
-    public Seance(Film film, Salle salle, Jour jour, Heure heure) {
+    public Seance(){
+    }
+    
+    public Seance(int id,Film film, Jour jour, Heure heure, Salle salle) {
+        this.id=id;
         this.film = film;
         this.salle = salle;
         this.jour = jour;
@@ -37,4 +44,56 @@ public class Seance {
     public Heure getHeure() {
         return heure;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setFilm(Film film) {
+        this.film = film;
+    }
+
+    public void setSalle(Salle salle) {
+        this.salle = salle;
+    }
+
+    public void setJour(Jour jour) {
+        this.jour = jour;
+    }
+
+    public void setHeure(Heure heure) {
+        this.heure = heure;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Seance other = (Seance) obj;
+        if (!Objects.equals(this.film, other.film)) {
+            return false;
+        }
+        if (!Objects.equals(this.salle, other.salle)) {
+            return false;
+        }
+        if (!Objects.equals(this.jour, other.jour)) {
+            return false;
+        }
+        if (!Objects.equals(this.heure, other.heure)) {
+            return false;
+        }
+        return true;
+    }
+    
 }

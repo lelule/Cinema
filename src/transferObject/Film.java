@@ -5,6 +5,8 @@
  */
 package transferObject;
 
+import java.util.Objects;
+
 /**
  * Film est la classe represntant un film 
  * @author Ludo
@@ -92,6 +94,16 @@ public class Film {
 
     public void setDurée(int durée) {
         this.durée = durée;
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        Film f =(Film)obj;
+        if(f.getTitre().equals(this.titre)){
+            return true;
+        }
+        return false;
     }
     
     

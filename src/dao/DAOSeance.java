@@ -6,6 +6,8 @@
 package dao;
 
 import java.util.ArrayList;
+import transferObject.Jour;
+import transferObject.Salle;
 import transferObject.Seance;
 
 /**
@@ -14,4 +16,8 @@ import transferObject.Seance;
  */
 public interface DAOSeance {
     ArrayList<Seance> selectSeances();
+    ArrayList<Seance> selectSeances(String exp,Jour deb,Jour fin,Salle s);
+    boolean insertSeance(Seance s);
+    boolean updateSeance(Seance s);
+    boolean deleteSeance(int id);
 }

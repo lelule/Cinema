@@ -5,6 +5,8 @@
  */
 package transferObject;
 
+import java.sql.Time;
+
 /**
  * La classe heure permet de représenter l'heure d'une Séance
  * @author Ludo
@@ -17,9 +19,9 @@ public class Heure {
     /**
      * 
      */
-    private String heure;
+    private Time heure;
 
-    public Heure(int idHeure, String heure) {
+    public Heure(int idHeure, Time heure) {
         this.idHeure = idHeure;
         this.heure = heure;
     }
@@ -28,9 +30,13 @@ public class Heure {
         return idHeure;
     }
 
-    public String getHeure() {
+    public Time getHeure() {
         return heure;
     }
-    
+
+    @Override
+    public String toString() {
+        return heure.toString();
+    }
     
 }

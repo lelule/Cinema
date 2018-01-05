@@ -44,9 +44,8 @@ public class DAOFilmMySQL implements DAOFilm{
     @Override
     public boolean insertFilm(Film f) {
         boolean ok = ConnexionMySQL.getInstance().actionQuery("Insert into Film (Id_Film, Titre_Film, Annee_Sortie, " +
-        "Duree) values (" + null + ",'" + f.getTitre().toUpperCase() +
-        "'," + f.getAnnée() + "," + f.getDurée()+")");
-        
+                    "Duree) values (" + null + ",'" + f.getTitre().toUpperCase() +
+                    "'," + f.getAnnée() + "," + f.getDurée()+")");
         return ok;
     }
 
@@ -64,6 +63,22 @@ public class DAOFilmMySQL implements DAOFilm{
          boolean ok = ConnexionMySQL.getInstance().actionQuery("Delete from film where Id_Film = " + id);
         
         return ok;
+    }
+
+    @Override
+    public ArrayList<Film> selectFilms(int id) {
+        ArrayList<Film> listeFilms= new ArrayList();
+        String req= "Select * from Film where id_film ="+id;
+        try {
+            ResultSet resu=ConnexionMySQL.getInstance().selectQuery(req);     
+            while (resu.next()){
+                listeFilms.add(new Film(resu.getInt("id_Film"),resu.getString("titre_film"),resu.getInt("annee_sortie"),resu.getInt("duree")));
+            }
+            
+        }catch(SQLException e){
+            System.out.println(e.toString()+"\nerreur select");
+        }
+        return listeFilms;
     }
 
 }
