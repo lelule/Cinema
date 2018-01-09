@@ -71,29 +71,11 @@ public class Seance {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
+        Seance s=(Seance)obj;
+        if(film.equals(s.getFilm()) && salle.equals(s.getSalle()) && jour.equals(s.getJour()) && heure.equals(s.getHeure())){
             return true;
         }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Seance other = (Seance) obj;
-        if (!Objects.equals(this.film, other.film)) {
-            return false;
-        }
-        if (!Objects.equals(this.salle, other.salle)) {
-            return false;
-        }
-        if (!Objects.equals(this.jour, other.jour)) {
-            return false;
-        }
-        if (!Objects.equals(this.heure, other.heure)) {
-            return false;
-        }
-        return true;
+        return false;
     }
     
 }

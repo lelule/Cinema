@@ -38,5 +38,14 @@ public class Heure {
     public String toString() {
         return heure.toString();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Heure h=(Heure)obj;
+        if(idHeure==h.getIdHeure()){
+            return true;
+        }
+        return false;
+    }
     
 }

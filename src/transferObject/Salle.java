@@ -36,4 +36,20 @@ public class Salle {
     public String toString() {
         return nom ;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        final Salle other = (Salle) obj;
+        if (this.idSalle !=other.idSalle) {
+            return false;
+        }
+        return true;
+    }
+    
 }

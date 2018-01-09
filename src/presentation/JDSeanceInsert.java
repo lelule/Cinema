@@ -156,8 +156,8 @@ public class JDSeanceInsert extends javax.swing.JDialog {
         s.setHeure((Heure)jComboHeure.getSelectedItem());
         s.setSalle((Salle)jComboSalle.getSelectedItem());
         boolean ok=false;
-        ArrayList <Film> f = daoFilm.selectFilms();
-        if(!f.contains(s)){
+        ArrayList <Seance> listeSeance = daoSea.selectSeances();
+        if(!listeSeance.contains(s) ){
             ok = daoSea.insertSeance(s);
         }
         if (!ok){

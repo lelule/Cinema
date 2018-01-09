@@ -100,7 +100,7 @@ public class JIFSeances extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Titre");
 
-        jLabel2.setText("Debut :");
+        jLabel2.setText("Du:");
 
         jComboDebut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +108,7 @@ public class JIFSeances extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel3.setText("Fin :");
+        jLabel3.setText("Au:");
 
         jComboFin.setPreferredSize(new java.awt.Dimension(60, 22));
         jComboFin.addActionListener(new java.awt.event.ActionListener() {

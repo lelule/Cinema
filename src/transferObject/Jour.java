@@ -35,5 +35,16 @@ public class Jour {
         String d=sdf.format(date_jour);
         return d;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Jour j=(Jour)obj;
+        if(idJour==j.getIdJour()){
+            return true;
+        }
+        return false;
+    }
+    
+    
     
 }
